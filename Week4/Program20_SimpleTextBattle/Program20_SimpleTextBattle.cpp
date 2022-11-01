@@ -37,6 +37,7 @@ void Attack(int choice)
 	switch (choice)
 	{
 	case 1:
+		cout << "\n";
 		enemyHealth -= swordDamage;
 		playerHealth -= trollSwordDamage;
 		cout << "You have hit the troll!\n";
@@ -49,9 +50,12 @@ void Attack(int choice)
 		{
 			enemyHealth = 0;
 		}
-		cout << "Player health = " << playerHealth << "Enemy health = " << enemyHealth << "\n";
+		cout << "Player health = " << playerHealth << ", Enemy health = " << enemyHealth << "\n";
+		cout << "\n";
+		break;
 
 	case 2:
+		cout << "\n";
 		enemyHealth -= magicDamage;
 		playerHealth -= trollMagicDamage;
 		cout << "You have hit the troll!\n";
@@ -64,9 +68,12 @@ void Attack(int choice)
 		{
 			enemyHealth = 0;
 		}
-		cout << "Player health = " << playerHealth << "Enemy health = " << enemyHealth << "\n";
+		cout << "Player health = " << playerHealth << ", Enemy health = " << enemyHealth << "\n";
+		cout << "\n";
+		break;
 
 	case 3:
+		cout << "\n";
 		enemyHealth -= axeDamage;
 		playerHealth -= trollAxeDamage;
 		cout << "You have hit the troll!\n";
@@ -79,10 +86,13 @@ void Attack(int choice)
 		{
 			enemyHealth = 0;
 		}
-		cout << "Player health = " << playerHealth << "Enemy health = " << enemyHealth << "\n";
-
-	default:
+		cout << "Player health = " << playerHealth << ", Enemy health = " << enemyHealth << "\n";
+		cout << "\n";
 		break;
+
+	//default:
+	//	cout << "\n";
+	//	break;
 	}
 }
 
@@ -106,5 +116,5 @@ bool playerStateFunction()
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
