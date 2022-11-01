@@ -18,7 +18,16 @@ int main()
 		cout << "Enter Choice : ";
 		cin >> playerChoice;
 
-		Attack(playerChoice);
+		if (playerChoice == 1 || playerChoice == 2 || playerChoice == 3)
+		{
+			Attack(playerChoice);
+		}
+		else
+		{
+			cout << "Enter Choice 1, 2 or 3: ";
+			cin >> playerChoice;
+			Attack(playerChoice);
+		}
 		if (playerStateFunction()) play = true;
 		else play = false;
 	}
@@ -111,9 +120,13 @@ bool playerStateFunction()
 			enemyHealth = 2000;
 			return true;
 		}
-		else
+		else if (playAgain == 'n' || playAgain == 'N')
 		{
 			return false;
+		}
+		else
+		{
+			playerStateFunction();
 		}
 	}
 	return true;
