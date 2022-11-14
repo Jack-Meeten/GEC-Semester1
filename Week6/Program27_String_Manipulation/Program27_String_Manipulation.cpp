@@ -14,24 +14,38 @@ int main()
 
     getline(cin, userName);
 
+    cout << "\n";
+
     int xIndex = stringToChange.find("XX");
     stringToChange.insert(xIndex + 1, userName);
     cout << stringToChange << "\n";
+
+    cout << "\n";
 
     stringToChange.erase(xIndex, 1);
     stringToChange.erase(xIndex + userName.length(), 1);
     cout << stringToChange << "\n";
 
-    cout << "Enter a second name longer than the first : \n";
+    cout << "\n";
 
-    cin >> secondUserName;
+    bool canTry = true;
 
-    secondUserName = secondUserName.erase(secondUserName.find(' '));
-    string firstFirstName = userName.erase(userName.find(' '));
-
-    if (secondUserName.length() > firstFirstName.length())
+    while (canTry)
     {
-        stringToChange.replace(xIndex, firstFirstName.length(), secondUserName);
-        cout << stringToChange;
+        cout << "Enter a second name longer than the first : \n";
+        getline(cin, secondUserName);
+
+        cout << "\n";
+
+        string firstFirstName = userName;
+        firstFirstName.erase(userName.find(' '));
+        secondUserName.erase(secondUserName.find(' '));
+
+        if (secondUserName.length() > firstFirstName.length())
+        {
+            stringToChange.replace(xIndex, firstFirstName.length(), secondUserName);
+            cout << stringToChange;
+            canTry = false;
+        }
     }
 }
