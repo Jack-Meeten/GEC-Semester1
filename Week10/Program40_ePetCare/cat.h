@@ -1,16 +1,13 @@
 #ifndef CAT_H
 #define CAT_H
-class cat
+#include "Pet.h"
+
+class Cat : public Pet
 {
 public:
-	cat(int initial_age);
-	~cat();
-
-	int GetAge();
-	void SetAge(int age);
-
-private : 
-	int itsAge;
+	Cat() {};
+	~Cat() {};
+	void Talk();
 };
 #endif
 

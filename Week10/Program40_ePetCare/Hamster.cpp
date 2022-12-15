@@ -1,8 +1,8 @@
-#include "Cat.h"
+#include "Hamster.h"
 #include <iostream>
-void Cat::Talk()
+void Hamster::Talk()
 {
-	std::cout << "I am cat and I am ";
+	std::cout << "I am Hamster and I am ";
 
 	int mood = Pet::GetMood();
 	if (mood > 15)

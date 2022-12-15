@@ -1,8 +1,8 @@
-#include "Cat.h"
-#include <iostream>
-void Cat::Talk()
+#include<iostream>
+#include "Dog.h"
+void Dog::Talk()
 {
-	std::cout << "I am cat and I am ";
+	std::cout << "I am dog and I am ";
 
 	int mood = Pet::GetMood();
 	if (mood > 15)
